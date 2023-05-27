@@ -1,0 +1,1 @@
+"# Academy.DevOps.FriendsApplication" 
