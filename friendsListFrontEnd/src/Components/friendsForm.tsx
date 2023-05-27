@@ -18,7 +18,7 @@ const FriendForm = () => {
     };
 
     try {
-      await axios.post("http://127.0.0.1:3000/friends/", newFriend);
+      await axios.post("http://127.0.0.1:3001/friends/", newFriend);
       // Request successful, do something here (e.g., show success message, update state)
       console.log("Friend added successfully");
     } catch (error) {

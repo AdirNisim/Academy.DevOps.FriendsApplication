@@ -20,6 +20,7 @@ export class FriendsService {
   constructor(private firebaseService: FirebaseService) {}
 
   async create(friend: CreateFriendDto): Promise<void> {
+    //TODO ! check
     const docRef: DocumentReference<DocumentData> = doc(
       this.firebaseService.FriendsCollection,
       friend.id,

@@ -3,7 +3,7 @@ version: "1"
 services:
   frontend:
     build:
-      context: ./friendsListFrondEnd
+      context: ./friendsListFrontEnd
     ports:
       - "3000:3000"
     depends_on:
@@ -11,6 +11,6 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ./friendsListBackEnd
     ports:
-      - "8000:8000"
+      - "3001:3001"

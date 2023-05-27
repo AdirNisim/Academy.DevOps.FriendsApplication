@@ -6,12 +6,12 @@ async function bootstrap() {
 
   // Enable CORS for all routes
   app.enableCors({
-    origin: 'http://localhost:3001',
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
   });
 
-  await app.listen(3000);
+  await app.listen(3001);
 }
 
 bootstrap();
