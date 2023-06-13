@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Container Built') {
             steps {
-                pwsh(script: 'docker images -a')
+                powershell 'docker images -a'
             }
         }
     }
