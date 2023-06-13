@@ -7,9 +7,9 @@ pipeline {
                 echo "$GIT_BRANCH"
             }
         }
-        stage('Verify Branch') {
+        stage('Verify Files in Branch') {
             steps {
-                sh 'git ls-tree --name-only $GIT_BRANCH'
+                sh "git ls-tree --name-only $GIT_BRANCH"
             }
         }
         stage('Container Built') {
@@ -24,5 +24,5 @@ pipeline {
                 }
             }
         }
-    } 
-} 
+    }
+}
