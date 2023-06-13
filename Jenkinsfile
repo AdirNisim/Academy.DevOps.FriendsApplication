@@ -7,6 +7,11 @@ pipeline {
                 echo "$GIT_BRANCH"
             }
         }
+        stage('Verify Branch') {
+            steps {
+                sh 'git ls-tree --name-only $GIT_BRANCH'
+            }
+        }
         stage('Container Built') {
             steps {
                 script {
