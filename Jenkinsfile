@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Container Built') {
             steps {
-                powershell 'docker images -a'
+                pwsh(script: 'Write-Output "Hello-World"')
             }
         }
     }
