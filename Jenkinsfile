@@ -9,12 +9,8 @@ pipeline {
         }
         stage('Verify Files in Branch') {
             steps {
-                sh "git ls-tree --name-only $GIT_BRANCH"
-            }
-        }
-        stage('Container Built') {
-            steps {
-                sh 'docker images -a'
+              pwsh(script: 'Write-Outpout "Hello Dima"')   
+              pwsh(script: 'docker images -a')
             }
         }
     }
