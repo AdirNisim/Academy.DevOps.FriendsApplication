@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Container Built') {
             steps {
-                sh 'pwsh --version'
+                pwsh(script: 'Write-Output "Hello Word"')
             }
         }
     }
