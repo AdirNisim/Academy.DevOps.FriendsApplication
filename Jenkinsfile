@@ -7,9 +7,11 @@ pipeline {
                 echo "$GIT_BRANCH"
             }
         }
-        stage('Verify Files in Branch') {
+        stage('Deploy App') {
             steps {
-              pwsh 'docker images -a'
+              script {
+                kubernetesDeploy(configs: "docker-compose.yaml", kubeconfigId: "mykubeconfig")
+              }
             }
         }
     }
