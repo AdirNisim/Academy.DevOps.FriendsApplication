@@ -9,8 +9,7 @@ pipeline {
         }
         stage('Verify Files in Branch') {
             steps {
-              pwsh(script: 'Write-Outpout "Hello Dima"')   
-              pwsh(script: 'docker images -a')
+              pwsh 'docker images -a'
             }
         }
     }
