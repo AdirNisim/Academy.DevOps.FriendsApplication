@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Container Built') {
             steps {
-                sh 'Write-Output "Hello Word"'
+                sh 'docker images -a'
             }
         }
     }
