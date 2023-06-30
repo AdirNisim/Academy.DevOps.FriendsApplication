@@ -7,11 +7,17 @@ pipeline {
                 echo "$GIT_BRANCH"
             }
         }
-        stage('Deploy App') {
+
+        stage('Verify tooling') {
             steps {
                 script {
-                    // Run Docker Compose Up
-                    dockerComposeUp()
+                    sh '''
+                    docker version
+                    docker info
+                    docker compose version
+                    curl --version
+                    jq --version
+                    '''
                 }
             }
         }
