@@ -9,9 +9,10 @@ pipeline {
         }
         stage('Deploy App') {
             steps {
-              script {
-                kubernetesDeploy(configs: "docker-compose.yaml", kubeconfigId: "mykubeconfig")
-              }
+                script {
+                    // Run Docker Compose Up
+                    dockerComposeUp()
+                }
             }
         }
     }
